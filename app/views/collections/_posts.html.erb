@@ -1,0 +1,7 @@
+<% if @posts.present? %>
+  <% @posts.each do |pic| %>
+    <%= image_tag pic.image_url %>
+  <% end %>
+<% else %>
+  <p>There are no posts containing the tag #<%= params[:search] %>.</p>
+<% end %>

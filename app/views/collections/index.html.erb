@@ -1,0 +1,28 @@
+<h1>Instagram Lookup</h1>
+<div class="container-fluid">
+  <div class="row">
+    <%= form_tag({:action => 'create', :controller => "collections"}, :method => "post", id: "search-form") do %>
+    <div class="col-md-2 col-sm-4 col-xs-12">
+      <%= text_field_tag :search, params[:search], placeholder: "Search tags" %>
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs-6">
+      <%= label_tag(:start_date, "Start Date") %>
+      <%= text_field_tag :start_date, params[:start_date], type: :date %>
+    </div>
+    <div class="col-md-4 float-right col-sm-4 col-xs-6">
+      <%= label_tag(:end_date, "End Date") %>
+      <%= text_field_tag :end_date, params[:end_date], type: :date %>
+    </div>
+    <div class="col-md-2 col-sm-3 col-xs-6">
+      <%= submit_tag "Search" %>
+      <% end %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <%= render :partial => "posts" %>
+    </div>
+  </div>
+
+</div>
+
