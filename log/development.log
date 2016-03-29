@@ -15949,3 +15949,88 @@ Processing by CollectionsController#index as HTML
   Rendered collections/_posts.html.erb (22.9ms)
   Rendered collections/index.html.erb within layouts/application (44.4ms)
 Completed 200 OK in 441ms (Views: 393.9ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/" for ::1 at 2016-03-29 13:45:19 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CollectionsController#index as HTML
+  [1m[35mCollection Load (0.8ms)[0m  SELECT "collections".* FROM "collections"
+  [1m[36mInstaPost Load (0.8ms)[0m  [1mSELECT "insta_posts".* FROM "insta_posts" WHERE "insta_posts"."collection_id" = $1[0m  [["collection_id", 20]]
+  Rendered collections/_posts.html.erb (25.4ms)
+  Rendered collections/index.html.erb within layouts/application (53.0ms)
+Completed 500 Internal Server Error in 439ms (ActiveRecord: 8.9ms)
+
+ActionView::Template::Error (File to import not found or unreadable: bootstrap.
+Load paths:
+  /Users/nruthya/DBC_stuff/InstagramTagger/app/assets/images
+  /Users/nruthya/DBC_stuff/InstagramTagger/app/assets/javascripts
+  /Users/nruthya/DBC_stuff/InstagramTagger/app/assets/stylesheets
+  /Users/nruthya/DBC_stuff/InstagramTagger/vendor/assets/javascripts
+  /Users/nruthya/DBC_stuff/InstagramTagger/vendor/assets/stylesheets
+  /Users/nruthya/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/twitter-bootstrap-rails-3.2.2/app/assets/fonts
+  /Users/nruthya/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/twitter-bootstrap-rails-3.2.2/app/assets/javascripts
+  /Users/nruthya/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/twitter-bootstrap-rails-3.2.2/app/assets/stylesheets
+  /Users/nruthya/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/twitter-bootstrap-rails-3.2.2/vendor/assets/stylesheets
+  /Users/nruthya/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/jquery-rails-4.1.1/vendor/assets/javascripts
+  /Users/nruthya/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/coffee-rails-4.1.1/lib/assets/javascripts):
+    2: <html>
+    3: <head>
+    4:   <title>InstaPix</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all' %>
+    6:   <%= javascript_include_tag 'application' %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/application.scss:1
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___3024661777642612720_70110098609020'
+  app/controllers/collections_controller.rb:26:in `index'
+
+
+  Rendered /Users/nruthya/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.6ms)
+  Rendered /Users/nruthya/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.9ms)
+  Rendered /Users/nruthya/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/nruthya/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (103.2ms)
+  Rendered /Users/nruthya/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/nruthya/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/nruthya/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/nruthya/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/nruthya/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (87.0ms)
+  Rendered /Users/nruthya/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/nruthya/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/nruthya/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (181.0ms)
+
+
+Started GET "/" for ::1 at 2016-03-29 13:46:51 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CollectionsController#index as HTML
+  [1m[35mCollection Load (0.6ms)[0m  SELECT "collections".* FROM "collections"
+  [1m[36mInstaPost Load (1.0ms)[0m  [1mSELECT "insta_posts".* FROM "insta_posts" WHERE "insta_posts"."collection_id" = $1[0m  [["collection_id", 20]]
+  Rendered collections/_posts.html.erb (25.8ms)
+  Rendered collections/index.html.erb within layouts/application (47.3ms)
+Completed 200 OK in 3755ms (Views: 3696.9ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/assets/application.self-cb20ae0fe5ce68c6e87d0b4ee4f7ff6642a204fba02fa28f787d5ff5879abe68.css?body=1" for ::1 at 2016-03-29 13:46:55 -0700
+
+
+Started GET "/" for ::1 at 2016-03-29 13:48:06 -0700
+Processing by CollectionsController#index as HTML
+  [1m[35mCollection Load (0.5ms)[0m  SELECT "collections".* FROM "collections"
+  [1m[36mInstaPost Load (0.5ms)[0m  [1mSELECT "insta_posts".* FROM "insta_posts" WHERE "insta_posts"."collection_id" = $1[0m  [["collection_id", 20]]
+  Rendered collections/_posts.html.erb (4.5ms)
+  Rendered collections/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 33ms (Views: 26.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.self-cb20ae0fe5ce68c6e87d0b4ee4f7ff6642a204fba02fa28f787d5ff5879abe68.css?body=1" for ::1 at 2016-03-29 13:48:06 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-29 13:48:06 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-29 13:48:06 -0700
+
+
+Started GET "/assets/collections.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-29 13:48:07 -0700
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-03-29 13:48:07 -0700
